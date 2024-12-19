@@ -1,0 +1,132 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4; /* Light background color */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+        }
+        *, *::before, *::after {
+            box-sizing: inherit; /* Inherit the box-sizing */
+        }
+        .header {
+            background-image: url('https://i.pinimg.com/736x/db/34/d4/db34d40b271fb59477621550bf73ea0b.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 40px 20px; /* Increased padding */
+            width: 100%; /* Full width */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+            transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+        }
+        .header:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+        h1 {
+            font-size: 3rem; /* Responsive font size */
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            margin: 20px; /* Margin for spacing */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden; /* To round corners of children */
+        }
+        .sidebar {
+            background-color: #ffffff; /* White background for sidebar */
+            width: 220px;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+        }
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px; /* Space below heading */
+        }
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #007BFF;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        .sidebar a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+        .content {
+            background-color: white;
+            padding: 40px;
+            flex: 1;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Increased shadow */
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 2rem; /* Larger heading */
+            color: #333; /* Darker text for contrast */
+        }
+        .content p {
+            line-height: 1.6; /* Improved line spacing */
+            margin-bottom: 15px; /* Space between paragraphs */
+        }
+        .footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative; /* Ensure footer is at the bottom */
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                box-shadow: none; /* Remove shadow for mobile view */
+            }
+        }
+    </style>
+</head>
+<body style="
+        font-family: 'Roboto';
+">
+    <div class="header" role="banner">
+       <h1>QUIZIA</h1>
+    </div>
+    <div class="container" role="main">
+        <aside class="sidebar" role="navigation">
+            <h2>Theme</h2>
+            <a href="https://quizorbit.com/general-awareness-quiz/ ">General Knowledge</a>
+            <a href="https://www.indiabix.com/online-test/aptitude-test/ ">Aptitude </a>
+            <a href="https://www.britannica.com/quiz/science-quiz    "> Science </a>
+            <a href="https://quizorbit.com/quiz-on-c/   ">C Programming</a>
+
+        </aside>
+        <div class="content">
+            <h2>Welcome to QUIZIA</h2>
+            <p>Unleash your curiosity and challenge your knowledge with our fun and engaging quizzes! Whether you’re a trivia buff or just looking to learn something new, we have a wide variety of topics to suit everyone.</p>
+            <p>From history and science to pop culture and sports, our quizzes are designed to entertain and educate.</p>
+            <p>Join our community of quiz lovers, track your progress, and compete with friends. With new quizzes added regularly, there’s always something fresh to explore. Are you ready to put your knowledge to the test?</p>
+            <p>Dive in and start quizzing today!</p> 
+        </div>
+    </div>
+    <div class="footer" role="contentinfo">
+        <p>© 2024 QUIZIA. All rights reserved.</p>
+    </div>
+
+
+</body></html>
